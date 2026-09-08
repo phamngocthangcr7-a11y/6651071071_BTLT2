@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Phiếu đăng ký tham gia chương trình khuyến mãi</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1 { color: #556B2F; text-align: center; }
+        table {
+            background-color: #E2EFDA;
+            border-collapse: collapse;
+            margin: 0 auto;
+            width: 500px;
+        }
+        table, th, td { border: 1px solid #385723; }
+        td { padding: 6px; }
+        .text-center { text-align: center; }
+        #message { color: #FF0000; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Phiếu đăng ký tham gia chương trình khuyến mãi</h1>
+
+    <form name="registerForm">
+        <table>
+            <tr>
+                <td>Họ và tên</td>
+                <td><input type="text" id="fullname" value="Phạm Ngọc Thắng" style="width: 90%;"></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td><input type="text" id="address" value="2Bia Hùng Vương, Q10" style="width: 70%;"></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="text" id="phone" value="0909097506"></td>
+            </tr>
+            <tr>
+                <td>Phái</td>
+                <td>
+                    <input type="radio" name="gender" value="Nam" checked> Nam
+                    <input type="radio" name="gender" value="Nữ"> Nữ
+                </td>
+            </tr>
+            <tr>
+                <td>Nghề nghiệp</td>
+                <td>
+                    <select id="job">
+                        <option value="Giáo viên" selected>Giáo viên</option>
+                        <option value="Học sinh / Sinh viên">Học sinh / Sinh viên</option>
+                        <option value="Kỹ sư">Kỹ sư</option>
+                        <option value="Khác">Khác</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Chọn sản phẩm tham gia</td>
+                <td>
+                    <select id="products" multiple size="4" style="width: 150px;">
+                        <option value="Kem đánh răng" selected>Kem đánh răng</option>
+                        <option value="Bột giặt">Bột giặt</option>
+                        <option value="Dầu gội đầu" selected>Dầu gội đầu</option>
+                        <option value="Sữa tắm">Sữa tắm</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Số người dự đoán tham gia</td>
+                <td><input type="text" id="prediction" value="250000"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center">
+                    <input type="button" value="Đồng ý" onclick="dangKy()">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center">
+                    <span id="message"></span>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function dangKy() {
+            document.getElementById("message").innerText = "Bạn đã đăng ký thành công!!!";
+        }
+    </script>
+
+</body>
+</html>

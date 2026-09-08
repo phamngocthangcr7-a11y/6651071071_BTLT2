@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký du lịch</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1 { color: #2B547E; text-align: center; }
+        table {
+            background-color: #FFF2CC;
+            border-collapse: collapse;
+            margin: 0 auto;
+            width: 550px;
+        }
+        table, th, td { border: 1px solid #B4C6E7; }
+        td { padding: 6px; }
+        fieldset {
+            border: 1px solid #8B0000;
+            margin: 0;
+            padding: 5px 10px;
+        }
+        legend { color: #8B0000; font-style: italic; }
+        .text-center { text-align: center; }
+        #message { color: #FF0000; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Đăng ký du lịch</h1>
+
+    <form name="tourForm">
+        <table>
+            <tr>
+                <td>Họ và tên</td>
+                <td><input type="text" id="fullname" value="Phạm Ngọc Thắng" style="width: 80%;"></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td><input type="text" id="address" value="227 Nguyễn Văn Cừ" style="width: 60%;"></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="text" id="phone" value="8351056"></td>
+            </tr>
+            <tr>
+                <td>Khách Việt Nam</td>
+                <td><input type="checkbox" id="isVietnamese" checked></td>
+            </tr>
+            <tr>
+                <td>Chọn tour</td>
+                <td>
+                    <select id="tour">
+                        <option value="Buôn mê thuật - Gia lai - Kontum" selected>Buôn mê thuật - Gia lai - Kontum</option>
+                        <option value="Nha Trang - Đà Lạt">Nha Trang - Đà Lạt</option>
+                        <option value="Phú Quốc">Phú Quốc</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Phương tiện</td>
+                <td>
+                    <input type="radio" name="vehicle" value="Máy bay"> Máy bay
+                    <input type="radio" name="vehicle" value="Xe ô tô" checked> Xe ô tô
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <fieldset>
+                        <legend>Số lượng đoàn khách</legend>
+                        Người lớn <input type="text" id="adults" value="6" style="width: 50px;">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        Trẻ em <input type="text" id="children" value="4" style="width: 50px;">
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>Ghi chú thêm</td>
+                <td>
+                    <textarea id="note" rows="3" style="width: 95%;">Có 2 trẻ em dưới 6 tuổi&#10;Có 2 người ăn chay</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center">
+                    <input type="button" value="Đồng ý" onclick="dangKyTour()">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center">
+                    <span id="message"></span>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function dangKyTour() {
+            document.getElementById("message").innerText = "Bạn đã đăng ký thành công!!!";
+        }
+    </script>
+
+</body>
+</html>

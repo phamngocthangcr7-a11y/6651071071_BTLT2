@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <!-- 1. Tiêu đề cửa sổ -->
+    <title>Tạo form và các điều khiển trên form</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1 { color: #8B0000; text-align: center; }
+        table {
+            background-color: #D3D3D3;
+            border-collapse: collapse;
+            margin: 0 auto;
+            width: 320px;
+        }
+        table, th, td { border: 1px solid #808080; }
+        td { padding: 5px; }
+        .bg-light { background-color: #E6F2FF; }
+        .text-center { text-align: center; }
+        #result { color: #0000FF; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Đăng nhập</h1>
+
+    <!-- 2. Tạo Form & Table trong Form -->
+    <form name="loginForm">
+        <table>
+            <tr>
+                <td>Mã người dùng:</td>
+                <td><input type="text" id="username" value="ptnhung"></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu:</td>
+                <td><input type="password" id="password" value="12345678"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center bg-light">
+                    <input type="button" value="Đồng ý" onclick="dangNhap()">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center bg-light">
+                    <!-- Nhãn dùng để xuất nội dung Mã người dùng -->
+                    <span id="result"></span>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        // Xử lý khi nhấn nút Đồng ý
+        function dangNhap() {
+            var user = document.getElementById("username").value;
+            document.getElementById("result").innerText = user;
+        }
+    </script>
+
+</body>
+</html>
