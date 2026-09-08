@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 1. Tiêu đề cửa sổ: Định dạng văn bản -->
+    <title>Định dạng văn bản</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #ffffff;
+        }
+
+        h1 {
+            color: green;
+            text-align: center;
+        }
+
+        /* Dạng công thức hóa học và biểu thức phương trình bậc hai, có chữ màu đỏ */
+        .red-text {
+            color: #FF0000;
+        }
+
+        /* Đoạn code vòng lập For: chữ màu xanh dương đậm, nền màu xám, có định dạng canh lề */
+        .code-block {
+            background-color: #CCCCCC;
+            color: #0000CC;
+            padding: 15px;
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+            width: 70%;
+            margin: 15px auto;
+            white-space: pre; /* Giữ nguyên khoảng trắng và xuống dòng */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tiêu đề trang -->
+    <h1>Định dạng văn bản</h1>
+
+    <!-- Nội dung chính -->
+    <p>
+        <u><b>Hóa học:</b></u> <i>Nước:</i> <span class="red-text">H<sub>2</sub>O</span> ; <i>Axit Sunfuric:</i> <span class="red-text">H<sub>2</sub>SO<sub>4</sub></span>
+    </p>
+
+    <p>
+        <u><b>Toán học:</b></u> <i>Phương trình bậc 2:</i> <span class="red-text">ax<sup>2</sup> + bx + c = 0</span>
+    </p>
+
+    <p>
+        <u><b>Tin học:</b></u> <i>Vòng lập For:</i>
+    </p>
+
+    <!-- Đoạn code vòng lặp For -->
+    <div class="code-block">
+        For i = 0 To 10
+
+            Tong = Tong + 1
+
+        Next
+    </div>
+
+</body>
+</html>
